@@ -18,7 +18,7 @@ use App\Http\Controllers\CrudController;
 
 
 Route::get('/', function () {
-    return view('crud.index');
+    return view('cruds.index');
 });
 
 

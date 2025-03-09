@@ -11,14 +11,14 @@
         </tr>
     </thead>
     <tbody>
-        {{-- @foreach ($cruds as $crud)
+        @foreach ($mohs as $crud)
             <tr>
                 <td>{{ $crud->id }}</td>
                 <td>{{ $crud->name }}</td>
                 <td>{{ $crud->role }}</td>
                 <td>{{ $crud->DB }}</td>
                 <td>
-                    <a href="{{ route('cruds.edit', $crud->id) }}" class="btn">Edit</a>
+                    <a href="{{ route( 'cruds.edit', $crud->id) }}" class="btn">Edit</a>
                     <form action="{{ route('cruds.destroy', $crud->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
@@ -27,6 +27,6 @@
                     </form>
                 </td>
             </tr>
-        @endforeach --}}
+        @endforeach
     </tbody>
 </table>

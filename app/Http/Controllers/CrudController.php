@@ -13,9 +13,8 @@ class CrudController extends Controller
      */
     public function index()
     {
-        $cruds = Crud::all();
-        dd($cruds);
-        return view("crud.index", compact("cruds"));
+        $mohs = Crud::all();
+        return view("cruds.index", compact("mohs"));
     }
 
     /**
@@ -23,7 +22,7 @@ class CrudController extends Controller
      */
     public function create()
     {
-        return view("crud.create");
+        return view("cruds.create");
     }
 
     /**
@@ -36,7 +35,7 @@ class CrudController extends Controller
             'role' => $request->role,
             'DB' => $request->DB,
         ]);
-        return redirect('crud');
+        return redirect('cruds');
     }
 
     /**
@@ -53,7 +52,7 @@ class CrudController extends Controller
     public function edit($id)
     {
         $cruds = Crud::findOrFail($id);
-        return view("crud.edit", compact("cruds"));
+        return view("cruds.edit", compact("cruds"));
     }
 
     /**
@@ -67,7 +66,7 @@ class CrudController extends Controller
             'role' => $request->role,
             'DB' => $request->DB,
         ]);
-        return redirect('crud');
+        return redirect('cruds');
     }
 
     /**
@@ -76,6 +75,6 @@ class CrudController extends Controller
     public function destroy($id)
     {
         Crud::destroy($id);
-        return redirect('crud');
+        return redirect('cruds');
     }
 }
