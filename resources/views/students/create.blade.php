@@ -1,7 +1,9 @@
 <h1> Add New Places </h1>
 
 <form action="{{route('students.store')}}" method="POST">
+
     @csrf
+
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" ><br><br>
 

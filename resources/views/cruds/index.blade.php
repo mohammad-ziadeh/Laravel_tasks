@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($mohs as $crud)
+        @foreach ($cruds as $crud)
             <tr>
                 <td>{{ $crud->id }}</td>
                 <td>{{ $crud->name }}</td>

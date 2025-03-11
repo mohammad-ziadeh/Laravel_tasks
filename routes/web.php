@@ -18,8 +18,13 @@ use App\Http\Controllers\CrudController;
 
 
 Route::get('/', function () {
-    return view('cruds.index');
+    return view('home');
 });
+// Route::get('/dash', function () {
+//     return view('cruds.index');
+// });
+
+
 
 
 Route::resource('students', StudentController::class);

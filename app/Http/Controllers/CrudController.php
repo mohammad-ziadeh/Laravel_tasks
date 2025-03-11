@@ -13,8 +13,8 @@ class CrudController extends Controller
      */
     public function index()
     {
-        $mohs = Crud::all();
-        return view("cruds.index", compact("mohs"));
+        $cruds = Crud::all();
+        return view("cruds.index", compact("cruds"));
     }
 
     /**

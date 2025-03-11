@@ -13,4 +13,7 @@ class Student extends Model
         'email',
         'phone',
     ];
+    public function phone (){
+        return $this->hasOne(Phone::class);
+    }
 }
