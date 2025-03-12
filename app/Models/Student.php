@@ -8,12 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'name',
-        'email',
-        'phone',
-    ];
-    public function phone (){
-        return $this->hasOne(Phone::class);
+
+
+    protected $fillable = ['name', 'email', 'phone', 'coach_id'];
+
+    public function coach() {
+        return $this->belongsTo(Coach::class);
     }
 }

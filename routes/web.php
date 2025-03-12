@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CrudController;
+use App\Http\Controllers\CoachController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,6 @@ Route::get('/', function () {
 
 
 
-Route::resource('students', StudentController::class);
 Route::resource('cruds', CrudController::class);
+Route::resource('coaches', CoachController::class);
+Route::resource('students', StudentController::class);
