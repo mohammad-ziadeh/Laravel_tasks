@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->integer('phone');
-            $table->unsignedBigInteger('coach_id');
-            $table->foreign('coach_id')->references('id')->on('coaches')->onDelete('cascade');
+            $table->string('phone');
+            //$table->unsignedBigInteger('coach_id');
+            //$table->foreign('coach_id')->references('id')->on('coaches')->onDelete('cascade');
             $table->timestamps();
         });
     }

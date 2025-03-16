@@ -43,9 +43,9 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function phones(){
-        return $this->hasMany(Phone::class);
-    }
+    // public function phones(){
+    //     return $this->hasMany(Phone::class);
+    // }
  
     public function roles(){
         return $this->belongsToMany(Role::class);

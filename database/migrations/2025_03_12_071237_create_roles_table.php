@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string( 'Role_name');
             $table->timestamps();
         });
-    }
+     }  
 
     /**
      * Reverse the migrations.
